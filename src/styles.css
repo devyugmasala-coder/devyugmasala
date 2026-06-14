@@ -42,33 +42,33 @@
 }
 
 :root {
-  --cream: #FDFCFB;
-  --charcoal: #1A1A1A;
-  --clay: #E76F51;
-  --gold: #C29E5E;
-  --saffron: #E9963A;
-  --turmeric: #E9C46A;
-  --stone-warm: #F7F5F2;
+  --cream: #F7F2EB;
+  --charcoal: #2C1E16;
+  --clay: #B53826;
+  --gold: #C89748;
+  --saffron: #D97706;
+  --turmeric: #EAB308;
+  --stone-warm: #EFE5D9;
 
   --background: var(--cream);
   --foreground: var(--charcoal);
-  --card: #ffffff;
+  --card: #FAF6F2;
   --card-foreground: var(--charcoal);
   --primary: var(--charcoal);
   --primary-foreground: var(--cream);
   --accent: var(--clay);
   --accent-foreground: #ffffff;
   --muted: var(--stone-warm);
-  --muted-foreground: #6b6b6b;
-  --border: rgb(26 26 26 / 0.08);
-  --input: rgb(26 26 26 / 0.12);
+  --muted-foreground: #665b53;
+  --border: rgb(44 30 22 / 0.1);
+  --input: rgb(44 30 22 / 0.14);
   --ring: var(--clay);
-  --destructive: #c0392b;
+  --destructive: #96281b;
   --destructive-foreground: #ffffff;
 }
 
 .dark {
-  --background: #0f0e0d;
+  --background: #19120D;
   --foreground: var(--cream);
 }
 

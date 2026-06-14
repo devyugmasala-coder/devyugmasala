@@ -25,7 +25,7 @@ export function SiteHeader() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-[#FDFCFB]/90 backdrop-blur-xl border-b border-border"
+            ? "bg-[#F7F2EB]/90 backdrop-blur-xl border-b border-border"
             : "bg-transparent border-b border-transparent"
         }`}
       >
@@ -75,7 +75,7 @@ export function SiteHeader() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="fixed inset-0 z-[60] bg-[#FDFCFB] md:hidden flex flex-col">
+        <div className="fixed inset-0 z-[60] bg-[#F7F2EB] md:hidden flex flex-col">
           <div className="container-luxury h-20 flex items-center justify-between">
             <img
               src="/product/logo.png"

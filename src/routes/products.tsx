@@ -45,7 +45,7 @@ function ProductsPage() {
       </section>
 
       {/* Filter bar */}
-      <section className="sticky top-20 z-30 bg-[#FDFCFB]/90 backdrop-blur-xl border-b border-border">
+      <section className="sticky top-20 z-30 bg-[#F7F2EB]/90 backdrop-blur-xl border-b border-border">
         <div className="container-luxury py-3 md:py-4 flex flex-col md:flex-row gap-3 md:items-center md:justify-between">
           <div className="relative flex-grow overflow-hidden w-full md:w-auto">
             <div className="flex overflow-x-auto flex-nowrap gap-2 pb-3 -mx-4 px-4 scrollbar-thin md:mx-0 md:px-0 md:pb-0 md:flex-wrap">
@@ -66,7 +66,7 @@ function ProductsPage() {
               ))}
             </div>
             {/* Subtle Right Fade Gradient to indicate scroll availability on mobile */}
-            <div className="absolute right-0 top-0 bottom-3 w-12 bg-gradient-to-l from-[#FDFCFB] to-transparent pointer-events-none md:hidden" />
+            <div className="absolute right-0 top-0 bottom-3 w-12 bg-gradient-to-l from-[#F7F2EB] to-transparent pointer-events-none md:hidden" />
           </div>
           <div className="relative w-full md:w-64">
             <Search size={14} strokeWidth={1.5} className="absolute left-3 top-1/2 -translate-y-1/2 text-charcoal/40" />

@@ -153,8 +153,16 @@ function HomePage() {
             <Reveal as="h2" delay={0.1} className="font-display text-4xl md:text-5xl text-charcoal">
               Our most-loved expressions
             </Reveal>
-            <Reveal delay={0.2}>
-              <div className="w-24 h-px bg-clay mx-auto mt-8" />
+            <Reveal delay={0.2} className="flex justify-center items-center gap-2 mt-8 text-clay">
+              <span className="w-8 h-px bg-clay/35" />
+              <span className="w-1.5 h-1.5 bg-clay rotate-45" />
+              <span className="w-3.5 h-px bg-clay/60" />
+              <span className="w-2.5 h-2.5 bg-clay rotate-45 flex items-center justify-center">
+                <span className="w-1 h-1 bg-[#F7F2EB] rounded-full" />
+              </span>
+              <span className="w-3.5 h-px bg-clay/60" />
+              <span className="w-1.5 h-1.5 bg-clay rotate-45" />
+              <span className="w-8 h-px bg-clay/35" />
             </Reveal>
           </div>
 
