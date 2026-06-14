@@ -45,33 +45,37 @@ function ProductsPage() {
       </section>
 
       {/* Filter bar */}
-      <section className="sticky top-20 z-30 bg-cream/85 backdrop-blur-xl border-b border-border">
-        <div className="container-luxury py-5 flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
-          <div className="flex flex-wrap gap-2 md:gap-1">
-            <CategoryButton
-              active={activeCategory === "all"}
-              onClick={() => navigate({ search: {} })}
-              label="All"
-              count={products.length}
-            />
-            {categories.map((cat) => (
+      <section className="sticky top-20 z-30 bg-[#FDFCFB]/90 backdrop-blur-xl border-b border-border">
+        <div className="container-luxury py-3 md:py-4 flex flex-col md:flex-row gap-3 md:items-center md:justify-between">
+          <div className="relative flex-grow overflow-hidden w-full md:w-auto">
+            <div className="flex overflow-x-auto flex-nowrap gap-2 pb-3 -mx-4 px-4 scrollbar-thin md:mx-0 md:px-0 md:pb-0 md:flex-wrap">
               <CategoryButton
-                key={cat.slug}
-                active={activeCategory === cat.slug}
-                onClick={() => navigate({ search: { category: cat.slug } })}
-                label={cat.name}
-                count={products.filter((p) => p.category === cat.slug).length}
+                active={activeCategory === "all"}
+                onClick={() => navigate({ search: {} })}
+                label="All"
+                count={products.length}
               />
-            ))}
+              {categories.map((cat) => (
+                <CategoryButton
+                  key={cat.slug}
+                  active={activeCategory === cat.slug}
+                  onClick={() => navigate({ search: { category: cat.slug } })}
+                  label={cat.name}
+                  count={products.filter((p) => p.category === cat.slug).length}
+                />
+              ))}
+            </div>
+            {/* Subtle Right Fade Gradient to indicate scroll availability on mobile */}
+            <div className="absolute right-0 top-0 bottom-3 w-12 bg-gradient-to-l from-[#FDFCFB] to-transparent pointer-events-none md:hidden" />
           </div>
-          <div className="relative w-full md:w-72">
+          <div className="relative w-full md:w-64">
             <Search size={14} strokeWidth={1.5} className="absolute left-3 top-1/2 -translate-y-1/2 text-charcoal/40" />
             <input
               type="search"
               placeholder="Search spices…"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              className="w-full pl-9 pr-3 py-2.5 bg-stone-warm border border-transparent focus:border-charcoal/20 outline-none text-sm font-light placeholder:text-charcoal/40 transition-colors"
+              className="w-full pl-9 pr-3 py-2 bg-stone-warm border border-transparent focus:border-charcoal/20 outline-none text-xs font-light placeholder:text-charcoal/40 transition-colors"
             />
           </div>
         </div>
@@ -179,10 +183,10 @@ function CategoryButton({
   return (
     <button
       onClick={onClick}
-      className={`px-4 py-2 text-[11px] uppercase tracking-[0.2em] transition-all border ${
+      className={`px-4 py-2 text-[10px] md:text-[11px] uppercase tracking-[0.2em] transition-all border rounded-full shrink-0 whitespace-nowrap ${
         active
           ? "bg-charcoal text-cream border-charcoal"
-          : "bg-transparent text-charcoal/70 border-transparent hover:border-charcoal/20"
+          : "bg-transparent text-charcoal/70 border-charcoal/15 hover:border-charcoal/40"
       }`}
     >
       {label} <span className="opacity-50 ml-1">({count})</span>

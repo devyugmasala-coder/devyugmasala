@@ -114,6 +114,30 @@
   padding-right: 1.5rem;
 }
 
+@utility scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@utility scrollbar-thin {
+  -ms-overflow-style: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(26, 26, 26, 0.2) transparent;
+  &::-webkit-scrollbar {
+    height: 3px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(26, 26, 26, 0.15);
+    border-radius: 9999px;
+  }
+}
+
 @keyframes float {
   0%, 100% { transform: translateY(0px) rotate(12deg); }
   50% { transform: translateY(-14px) rotate(12deg); }
