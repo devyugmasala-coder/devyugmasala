@@ -80,7 +80,7 @@ function HomePage() {
                     <div className="absolute inset-0 bg-charcoal/10 group-hover:bg-transparent transition-colors duration-500" />
                     <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-cream">
                       <span className="text-[10px] uppercase tracking-[0.3em]">0{i + 1}</span>
-                      <span className="text-[10px] uppercase tracking-[0.3em] opacity-0 group-hover:opacity-100 transition-opacity">
+                      <span className="text-[10px] uppercase tracking-[0.3em] md:opacity-0 md:group-hover:opacity-100 transition-opacity">
                         Explore →
                       </span>
                     </div>
