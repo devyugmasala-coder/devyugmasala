@@ -119,3 +119,17 @@
   50% { transform: translateY(-14px) rotate(12deg); }
 }
 .animate-float { animation: float 6s ease-in-out infinite; }
+
+/* ── Marquee product strip ── */
+@keyframes marquee-ltr {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee-ltr 55s linear infinite;
+  will-change: transform;
+}
+.animate-marquee-reverse {
+  animation: marquee-ltr 38s linear infinite reverse;
+  will-change: transform;
+}

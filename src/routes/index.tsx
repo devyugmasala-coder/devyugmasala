@@ -17,17 +17,17 @@ const categoryHero: Record<string, string> = {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Dehyug Masala — Heritage Indian Spices Since 1960" },
+      { title: "Dehyug Masala — Heritage Indian Spices Since 1980" },
       {
         name: "description",
         content:
-          "Premium Indian spices, blended masalas and seasonings, stone-ground at low temperature to preserve essential oils. Crafted by Dehyug since 1960.",
+          "Premium Indian spices, blended masalas and seasonings, stone-ground at low temperature to preserve essential oils. Crafted by Dehyug since 1980.",
       },
       { property: "og:title", content: "Dehyug Masala — Heritage Indian Spices" },
       {
         property: "og:description",
         content:
-          "Premium Indian spices and masala blends, stone-ground for purity since 1960.",
+          "Premium Indian spices and masala blends, stone-ground for purity since 1980.",
       },
     ],
   }),
@@ -48,7 +48,7 @@ function HomePage() {
       {/* Trust Bar */}
       <section className="py-14 border-y border-border bg-cream">
         <div className="container-luxury flex flex-wrap justify-between items-center gap-6">
-          {["Since 1960", "Single-Origin Sourcing", "Stone-Ground Purity", "Zero Additives"].map(
+          {["Since 1980", "Single-Origin Sourcing", "Stone-Ground Purity", "Zero Additives"].map(
             (item, i) => (
               <Reveal key={item} delay={i * 0.08} className="font-display italic text-xl md:text-2xl text-charcoal/70">
                 {item}
@@ -118,13 +118,13 @@ function HomePage() {
               <div className="relative">
                 <img
                   src={heritage}
-                  alt="A traditional Dehyug spice storehouse circa 1960"
+                  alt="A traditional Dehyug spice storehouse circa 1980"
                   loading="lazy"
                   className="w-full aspect-[4/5] object-cover rounded-sm"
                 />
                 <div className="hidden md:block absolute -bottom-10 -right-10 w-1/2 aspect-square bg-clay text-cream p-8 grid place-items-center text-center">
                   <div>
-                    <div className="font-display text-6xl md:text-7xl italic leading-none">60+</div>
+                    <div className="font-display text-6xl md:text-7xl italic leading-none">40+</div>
                     <div className="mt-3 text-[10px] uppercase tracking-[0.3em]">Years of Mastery</div>
                   </div>
                 </div>
@@ -133,7 +133,7 @@ function HomePage() {
           </div>
           <div className="relative order-1 lg:order-2">
             <div className="absolute -top-10 -left-4 md:-left-10 font-display text-[120px] md:text-[180px] text-cream/5 leading-none select-none pointer-events-none">
-              1960
+              1980
             </div>
             <Reveal as="h2" className="font-display text-4xl md:text-6xl font-light mb-8 leading-tight relative">
               A Journey Through <br />
@@ -141,13 +141,12 @@ function HomePage() {
             </Reveal>
             <Reveal delay={0.1} className="space-y-6 text-cream/70 font-light leading-relaxed text-base md:text-lg relative">
               <p>
-                Dehyug began in 1960 as a small artisanal workshop, dedicated to finding the most
-                potent spices across the Indian subcontinent.
+                Ambica Gruh Udhyog is the proud manufacturer of all these premium spices and masalas, which was established in 1980. 
+                Our products are marketed by Devyug Masala, a child company of Ambica Gruh Udhyog itself.
               </p>
               <p>
-                Today, while our facilities have grown to world-class scale, our commitment to
-                Old-World flavor remains unchanged. Every spice is slow-roasted and stone-ground at
-                low temperature to preserve the essential oils that define true flavor.
+                Because we are our own manufacturer and seller, we avoid third-party manufacturing issues, 
+                maintaining complete independence while keeping our product prices extremely low for you.
               </p>
             </Reveal>
             <Reveal delay={0.2} className="mt-10 relative">
@@ -175,26 +174,35 @@ function HomePage() {
             </Reveal>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {featuredProducts.map((p, i) => (
               <Reveal key={p.slug} delay={i * 0.08}>
-                <Link to="/products/$slug" params={{ slug: p.slug }} className="group block">
-                  <div className="aspect-square bg-stone-warm mb-6 overflow-hidden relative">
+                <Link
+                  to="/products/$slug"
+                  params={{ slug: p.slug }}
+                  className="group block bg-cream border border-border/40 rounded-xl p-5 shadow-sm hover:shadow-luxury hover:border-clay/30 transition-all duration-500 hover:-translate-y-1"
+                >
+                  <div className="aspect-[4/3] bg-stone-warm mb-6 overflow-hidden relative rounded-lg">
                     <img
                       src={p.image}
                       alt={p.name}
                       loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                      className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.03]"
                     />
                     <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1 bg-cream/90 text-[9px] uppercase tracking-[0.2em] font-medium text-charcoal">
+                      <span className="px-3 py-1 bg-cream/90 backdrop-blur-sm text-[9px] uppercase tracking-[0.22em] font-semibold text-charcoal shadow-sm rounded-md">
                         {categoryLabel(p.category)}
                       </span>
                     </div>
                   </div>
-                  <h4 className="text-sm uppercase tracking-[0.15em] mb-1 text-charcoal">{p.name}</h4>
-                  <p className="text-charcoal/50 text-[11px] mb-4">{p.subtitle}</p>
-                  <div className="text-xs font-medium text-clay">From ₹{p.priceFrom}</div>
+                  <div className="px-1">
+                    <h4 className="text-base md:text-lg font-medium uppercase tracking-[0.12em] mb-2 text-charcoal group-hover:text-clay transition-colors font-display">
+                      {p.name}
+                    </h4>
+                    <p className="text-charcoal/65 text-xs font-light leading-relaxed line-clamp-2 min-h-[40px]">
+                      {p.subtitle}
+                    </p>
+                  </div>
                 </Link>
               </Reveal>
             ))}

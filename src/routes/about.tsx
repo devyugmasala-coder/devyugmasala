@@ -7,16 +7,16 @@ import heroBlended from "@/assets/hero-blended-spices.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "Our Heritage — Dehyug Masala Since 1960" },
+      { title: "Our Heritage — Devyug Masala Since 1980" },
       {
         name: "description",
         content:
-          "Six decades of spice mastery. Discover the heritage, mission and manufacturing excellence that defines Dehyug Masala.",
+          "Four decades of spice mastery. Discover the heritage, mission and manufacturing excellence that defines Devyug Masala.",
       },
-      { property: "og:title", content: "Our Heritage — Dehyug Masala" },
+      { property: "og:title", content: "Our Heritage — Devyug Masala" },
       {
         property: "og:description",
-        content: "The story of Dehyug Masala — heritage, mission and manufacturing since 1960.",
+        content: "The story of Devyug Masala — heritage, mission and manufacturing since 1980.",
       },
     ],
   }),
@@ -33,7 +33,7 @@ function AboutPage() {
         <div className="relative container-luxury">
           <Reveal className="text-clay text-eyebrow mb-6">Our Story</Reveal>
           <Reveal as="h1" delay={0.1} className="font-display text-5xl md:text-8xl font-light text-charcoal max-w-4xl leading-[0.95]">
-            Six decades of <span className="italic">unwavering purity.</span>
+            Four decades of <span className="italic">unwavering purity.</span>
           </Reveal>
         </div>
       </section>
@@ -42,24 +42,23 @@ function AboutPage() {
       <section className="py-24 md:py-32">
         <div className="container-luxury grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
           <Reveal className="lg:col-span-5">
-            <span className="block text-clay text-eyebrow mb-4">Since 1960</span>
+            <span className="block text-clay text-eyebrow mb-4">Since 1980</span>
             <h2 className="font-display text-4xl md:text-5xl text-charcoal leading-tight">
-              The Dehyug Heritage.
+              The Devyug Heritage.
             </h2>
           </Reveal>
           <div className="lg:col-span-7 space-y-6 text-charcoal/70 font-light leading-relaxed text-base md:text-lg">
             <Reveal>
-              Dehyug was founded in 1960 as a single-counter spice shop in the heart of Gujarat. Our
-              founder believed that the soul of Indian cooking lived not in the recipe, but in the
-              integrity of every grain that touched the pan.
+              Ambica Gruh Udhyog is the proud manufacturer of all our premium spices and masalas, which was established in 1980. 
+              All products are marketed and distributed by Devyug Masala, a child company of Ambica Gruh Udhyog itself. 
+              Because we own our manufacturing facilities and handle our own sales, we bypass third-party supplier issues, enabling complete independence and allowing us to keep prices low.
             </Reveal>
             <Reveal delay={0.05}>
-              For more than six decades, that conviction has guided every decision — from how we
-              source, to how we grind, to how we seal the final pouch.
+              For more than four decades, that conviction has guided every decision — from how we
+              source, to how we grind, to how we market the final product under the Devyug name.
             </Reveal>
             <Reveal delay={0.1}>
-              Today, Dehyug supplies homes, restaurants and exporters across the world, while
-              remaining family-owned and family-led.
+              Today, Devyug Masala supplies premium spices to homes and businesses, remaining fully family-owned and committed to independent manufacturing.
             </Reveal>
           </div>
         </div>

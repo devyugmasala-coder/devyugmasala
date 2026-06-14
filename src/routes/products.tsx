@@ -17,7 +17,7 @@ export const Route = createFileRoute("/products")({
       {
         name: "description",
         content:
-          "Browse Dehyug Masala's full collection: pure spices, blended masalas and gourmet seasoning — single-origin, stone-ground, since 1960.",
+          "Browse Dehyug Masala's full collection: pure spices, blended masalas and gourmet seasoning — single-origin, stone-ground, since 1980.",
       },
       { property: "og:title", content: "Products — Dehyug Masala" },
       {
@@ -101,28 +101,35 @@ function ProductsPage() {
               <p className="text-sm">Try a different search or category.</p>
             </div>
           ) : (
-            <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-12 md:gap-x-8 md:gap-y-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 xl:gap-12">
               {filtered.map((p, i) => (
                 <Reveal key={p.slug} delay={Math.min(i * 0.04, 0.4)}>
-                  <Link to="/products/$slug" params={{ slug: p.slug }} className="group block">
-                    <div className="aspect-square bg-stone-warm mb-5 overflow-hidden relative">
+                  <Link
+                    to="/products/$slug"
+                    params={{ slug: p.slug }}
+                    className="group block bg-cream border border-border/40 rounded-xl p-5 shadow-sm hover:shadow-luxury hover:border-clay/30 transition-all duration-500 hover:-translate-y-1"
+                  >
+                    <div className="aspect-[4/3] bg-stone-warm mb-6 overflow-hidden relative rounded-lg">
                       <img
                         src={p.image}
                         alt={p.name}
                         loading="lazy"
-                        className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                        className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.03]"
                       />
-                      <div className="absolute top-3 left-3">
-                        <span className="px-2.5 py-1 bg-cream/90 text-[9px] uppercase tracking-[0.2em] font-medium text-charcoal">
+                      <div className="absolute top-4 left-4">
+                        <span className="px-3 py-1 bg-cream/90 backdrop-blur-sm text-[9px] uppercase tracking-[0.22em] font-semibold text-charcoal shadow-sm rounded-md">
                           {categoryShort(p.category)}
                         </span>
                       </div>
                     </div>
-                    <h3 className="text-sm uppercase tracking-[0.15em] mb-1 text-charcoal group-hover:text-clay transition-colors">
-                      {p.name}
-                    </h3>
-                    <p className="text-charcoal/50 text-[11px] mb-3">{p.subtitle}</p>
-                    <div className="text-xs font-medium text-clay">From ₹{p.priceFrom}</div>
+                    <div className="px-1">
+                      <h3 className="text-base md:text-lg font-medium uppercase tracking-[0.12em] mb-2 text-charcoal group-hover:text-clay transition-colors font-display">
+                        {p.name}
+                      </h3>
+                      <p className="text-charcoal/65 text-xs font-light leading-relaxed line-clamp-2 min-h-[40px]">
+                        {p.subtitle}
+                      </p>
+                    </div>
                   </Link>
                 </Reveal>
               ))}

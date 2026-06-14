@@ -77,22 +77,22 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Dehyug Masala — Premium Indian Spices Since 1960" },
+      { title: "Dehyug Masala — Premium Indian Spices Since 1980" },
       {
         name: "description",
         content:
-          "Dehyug Masala crafts heritage Indian spices, blended masalas and seasonings. Pure, single-origin, stone-ground since 1960.",
+          "Dehyug Masala crafts heritage Indian spices, blended masalas and seasonings. Pure, single-origin, stone-ground since 1980.",
       },
       { name: "author", content: "Dehyug Masala" },
-      { property: "og:title", content: "Dehyug Masala — Premium Indian Spices Since 1960" },
+      { property: "og:title", content: "Dehyug Masala — Premium Indian Spices Since 1980" },
       {
         property: "og:description",
         content:
-          "Heritage Indian spices, masala blends and seasonings. Stone-ground purity since 1960.",
+          "Heritage Indian spices, masala blends and seasonings. Stone-ground purity since 1980.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Dehyug Masala — Premium Indian Spices Since 1960" },
+      { name: "twitter:title", content: "Dehyug Masala — Premium Indian Spices Since 1980" },
       { name: "description", content: "Dehyug Spice Canvas is a premium website showcasing Dehyug Masala's spice products with an elegant, modern design." },
       { property: "og:description", content: "Dehyug Spice Canvas is a premium website showcasing Dehyug Masala's spice products with an elegant, modern design." },
       { name: "twitter:description", content: "Dehyug Spice Canvas is a premium website showcasing Dehyug Masala's spice products with an elegant, modern design." },

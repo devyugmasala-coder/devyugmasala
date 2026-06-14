@@ -10,11 +10,11 @@ export function SiteFooter() {
               Dehyug
             </div>
             <p className="text-xs leading-relaxed">
-              The artisan's choice for premium spices and blends. Since 1960.
+              The artisan's choice for premium spices and blends. Since 1980.
             </p>
           </div>
           <div>
-            <h5 className="text-cream text-[10px] uppercase tracking-[0.2em] mb-6">Collections</h5>
+            <h5 className="text-cream text-[10px] uppercase tracking-[0.2em] mb-6">Products</h5>
             <ul className="text-xs space-y-3">
               <li><Link to="/products" search={{ category: "pure-spices" }} className="hover:text-cream transition-colors">Pure Spices</Link></li>
               <li><Link to="/products" search={{ category: "blended-spices" }} className="hover:text-cream transition-colors">Blended Spices</Link></li>
@@ -33,8 +33,8 @@ export function SiteFooter() {
           </div>
           <div>
             <h5 className="text-cream text-[10px] uppercase tracking-[0.2em] mb-6">Inquiries</h5>
-            <p className="text-xs mb-4">sales@dehyugmasala.com</p>
-            <p className="text-xs mb-6">+91 98250 00000</p>
+            <p className="text-xs mb-4">devyugmasala@gmail.com</p>
+            <p className="text-xs mb-6">+91 78743 74333</p>
             <div className="flex gap-3">
               {["IG", "FB", "LI"].map((s) => (
                 <a

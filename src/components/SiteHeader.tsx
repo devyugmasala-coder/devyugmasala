@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react";
 const nav = [
   { to: "/", label: "Home" },
   { to: "/about", label: "Our Story" },
-  { to: "/products", label: "Collections" },
+  { to: "/products", label: "Products" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
@@ -31,9 +31,13 @@ export function SiteHeader() {
       <div className="container-luxury h-20 flex items-center justify-between">
         <Link
           to="/"
-          className="font-display text-2xl tracking-[0.2em] uppercase font-semibold text-charcoal"
+          className="flex items-center"
         >
-          Dehyug
+          <img
+            src="/product/logo.png"
+            alt="Dehyug Logo"
+            className="h-16 w-auto object-contain"
+          />
         </Link>
 
         <nav className="hidden md:flex gap-10 text-[11px] uppercase tracking-[0.2em] font-medium text-charcoal/80">
@@ -71,9 +75,11 @@ export function SiteHeader() {
       {open && (
         <div className="fixed inset-0 z-[60] bg-cream md:hidden flex flex-col">
           <div className="container-luxury h-20 flex items-center justify-between">
-            <span className="font-display text-2xl tracking-[0.2em] uppercase font-semibold">
-              Dehyug
-            </span>
+            <img
+              src="/product/logo.png"
+              alt="Dehyug Logo"
+              className="h-16 w-auto object-contain"
+            />
             <button
               aria-label="Close menu"
               onClick={() => setOpen(false)}

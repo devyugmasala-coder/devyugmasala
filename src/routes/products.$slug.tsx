@@ -66,7 +66,7 @@ function ProductDetail() {
         <div className="container-luxury grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           {/* Gallery */}
           <div className="lg:col-span-7">
-            <Reveal className="aspect-square bg-stone-warm mb-4 overflow-hidden">
+            <Reveal className="aspect-[4/3] bg-stone-warm mb-4 overflow-hidden">
               <img
                 src={gallery[active]}
                 alt={product.name}
@@ -78,7 +78,7 @@ function ProductDetail() {
                 <button
                   key={i}
                   onClick={() => setActive(i)}
-                  className={`aspect-square bg-stone-warm overflow-hidden transition-all ${
+                  className={`aspect-[4/3] bg-stone-warm overflow-hidden transition-all ${
                     i === active ? "ring-2 ring-clay ring-offset-4 ring-offset-cream" : "opacity-60 hover:opacity-100"
                   }`}
                 >
@@ -102,14 +102,10 @@ function ProductDetail() {
               <p className="text-charcoal/70 leading-relaxed font-light">{product.description}</p>
             </Reveal>
 
-            <Reveal delay={0.15} className="mt-10 grid grid-cols-2 gap-6 py-6 border-y border-border">
+            <Reveal delay={0.15} className="mt-10 gap-6 py-6 border-y border-border">
               <div>
                 <div className="text-[10px] uppercase tracking-[0.3em] text-charcoal/40 mb-2">Origin</div>
                 <div className="text-sm text-charcoal font-light">{product.origin}</div>
-              </div>
-              <div>
-                <div className="text-[10px] uppercase tracking-[0.3em] text-charcoal/40 mb-2">From</div>
-                <div className="text-sm text-charcoal font-light">₹{product.priceFrom}</div>
               </div>
             </Reveal>
 
@@ -167,7 +163,7 @@ function ProductDetail() {
               {related.map((p, i) => (
                 <Reveal key={p.slug} delay={i * 0.08}>
                   <Link to="/products/$slug" params={{ slug: p.slug }} className="group block">
-                    <div className="aspect-square bg-cream mb-5 overflow-hidden">
+                    <div className="aspect-[4/3] bg-cream mb-5 overflow-hidden">
                       <img
                         src={p.image}
                         alt={p.name}

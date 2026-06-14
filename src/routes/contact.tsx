@@ -110,29 +110,32 @@ function ContactPage() {
           <aside className="lg:col-span-5 lg:pl-8 lg:border-l lg:border-border">
             <Reveal className="mb-10">
               <h3 className="text-[11px] uppercase tracking-[0.3em] text-clay mb-6">Company</h3>
-              <p className="font-display text-2xl text-charcoal leading-snug">Dehyug Masala Pvt. Ltd.</p>
+              <p className="font-display text-2xl text-charcoal leading-snug">Devyug Masala</p>
               <p className="text-charcoal/60 font-light mt-2 text-sm">
-                Family-owned and operated since 1960.
+                A child company of Ambica Gruh Udhyog, established in 1980.
               </p>
             </Reveal>
 
             <div className="space-y-8">
               <ContactItem icon={<MapPin size={16} strokeWidth={1.5} />} title="Visit Us">
-                Plot 14, Spice Lane,
-                <br />
-                Industrial Estate, Ahmedabad,
-                <br />
-                Gujarat 380001, India
+                <div className="space-y-4">
+                  <div>
+                    <span className="font-medium text-charcoal/80 block mb-1">Branch 1:</span>
+                    shop1 Umiya Devi Society Part-2, Near St. Joseph School, Hatkeshwar, Amraiwadi
+                  </div>
+                  <div>
+                    <span className="font-medium text-charcoal/80 block mb-1">Branch 2:</span>
+                    32, Shaswat Mahadev-2, Opp. Dharti Status, Vastral, Ahmedabad
+                  </div>
+                </div>
               </ContactItem>
               <ContactItem icon={<Phone size={16} strokeWidth={1.5} />} title="Call">
-                +91 98250 00000
+                +91 78743 74333
                 <br />
                 Mon — Sat · 09:30 — 18:00 IST
               </ContactItem>
               <ContactItem icon={<Mail size={16} strokeWidth={1.5} />} title="Email">
-                sales@dehyugmasala.com
-                <br />
-                export@dehyugmasala.com
+                devyugmasala@gmail.com
               </ContactItem>
             </div>
 
