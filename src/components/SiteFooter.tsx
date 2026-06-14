@@ -6,9 +6,13 @@ export function SiteFooter() {
       <div className="container-luxury">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-20">
           <div className="col-span-2 md:col-span-1">
-            <div className="font-display text-2xl tracking-[0.2em] uppercase font-semibold text-cream mb-6">
-              Dehyug
-            </div>
+            <Link to="/" className="inline-block mb-6">
+              <img
+                src="/product/logo.png"
+                alt="Dehyug Logo"
+                className="h-16 w-auto object-contain"
+              />
+            </Link>
             <p className="text-xs leading-relaxed">
               The artisan's choice for premium spices and blends. Since 1980.
             </p>
