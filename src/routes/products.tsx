@@ -11,21 +11,6 @@ const searchSchema = z.object({
 
 export const Route = createFileRoute("/products")({
   validateSearch: searchSchema,
-  head: () => ({
-    meta: [
-      { title: "Products — Dehyug Masala Collections" },
-      {
-        name: "description",
-        content:
-          "Browse Dehyug Masala's full collection: pure spices, blended masalas and gourmet seasoning — single-origin, stone-ground, since 1980.",
-      },
-      { property: "og:title", content: "Products — Dehyug Masala" },
-      {
-        property: "og:description",
-        content: "Pure spices, blended masalas and gourmet seasoning by Dehyug.",
-      },
-    ],
-  }),
   component: ProductsPage,
 });
 

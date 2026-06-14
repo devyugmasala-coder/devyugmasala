@@ -4,21 +4,6 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 
 export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact — Dehyug Masala" },
-      {
-        name: "description",
-        content:
-          "Get in touch with Dehyug Masala for retail, wholesale, and export inquiries. Our team is ready to assist with the same care we give our spice.",
-      },
-      { property: "og:title", content: "Contact Dehyug Masala" },
-      {
-        property: "og:description",
-        content: "Retail, wholesale, and export inquiries — get in touch with Dehyug.",
-      },
-    ],
-  }),
   component: ContactPage,
 });
 

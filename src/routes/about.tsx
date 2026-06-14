@@ -5,21 +5,6 @@ import manufacturing from "@/assets/manufacturing.jpg";
 import heroBlended from "@/assets/hero-blended-spices.jpg";
 
 export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "Our Heritage — Devyug Masala Since 1980" },
-      {
-        name: "description",
-        content:
-          "Four decades of spice mastery. Discover the heritage, mission and manufacturing excellence that defines Devyug Masala.",
-      },
-      { property: "og:title", content: "Our Heritage — Devyug Masala" },
-      {
-        property: "og:description",
-        content: "The story of Devyug Masala — heritage, mission and manufacturing since 1980.",
-      },
-    ],
-  }),
   component: AboutPage,
 });
 

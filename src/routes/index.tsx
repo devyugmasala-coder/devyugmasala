@@ -15,22 +15,6 @@ const categoryHero: Record<string, string> = {
 };
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Dehyug Masala — Heritage Indian Spices Since 1980" },
-      {
-        name: "description",
-        content:
-          "Premium Indian spices, blended masalas and seasonings, stone-ground at low temperature to preserve essential oils. Crafted by Dehyug since 1980.",
-      },
-      { property: "og:title", content: "Dehyug Masala — Heritage Indian Spices" },
-      {
-        property: "og:description",
-        content:
-          "Premium Indian spices and masala blends, stone-ground for purity since 1980.",
-      },
-    ],
-  }),
   component: HomePage,
 });
 

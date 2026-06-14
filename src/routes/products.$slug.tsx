@@ -10,20 +10,6 @@ export const Route = createFileRoute("/products/$slug")({
     if (!product) throw notFound();
     return { product };
   },
-  head: ({ loaderData }) => {
-    const p = loaderData?.product;
-    if (!p) return { meta: [{ title: "Product not found" }] };
-    return {
-      meta: [
-        { title: `${p.name} — Dehyug Masala` },
-        { name: "description", content: p.description },
-        { property: "og:title", content: `${p.name} — Dehyug Masala` },
-        { property: "og:description", content: p.description },
-        { property: "og:image", content: p.image },
-        { name: "twitter:image", content: p.image },
-      ],
-    };
-  },
   notFoundComponent: () => (
     <div className="min-h-screen flex items-center justify-center pt-20">
       <div className="text-center">
