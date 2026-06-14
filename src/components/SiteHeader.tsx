@@ -36,7 +36,7 @@ export function SiteHeader() {
           >
             <img
               src="/product/logo.png"
-              alt="Dehyug Logo"
+              alt="Devyug Logo"
               className="h-16 w-auto object-contain"
             />
           </Link>
@@ -79,7 +79,7 @@ export function SiteHeader() {
           <div className="container-luxury h-20 flex items-center justify-between">
             <img
               src="/product/logo.png"
-              alt="Dehyug Logo"
+              alt="Devyug Logo"
               className="h-16 w-auto object-contain"
             />
             <button

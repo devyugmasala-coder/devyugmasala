@@ -108,7 +108,7 @@ function HomePage() {
               <div className="relative">
                 <img
                   src={heritage}
-                  alt="A traditional Dehyug spice storehouse circa 1980"
+                  alt="A traditional Devyug spice storehouse circa 1980"
                   loading="lazy"
                   className="w-full aspect-[4/5] object-cover rounded-sm"
                 />
@@ -215,7 +215,7 @@ function HomePage() {
             <div className="bg-cream p-6 md:p-8 shadow-luxury">
               <img
                 src={manufacturing}
-                alt="Dehyug stainless-steel manufacturing facility"
+                alt="Devyug stainless-steel manufacturing facility"
                 loading="lazy"
                 className="w-full aspect-[16/10] object-cover"
               />
@@ -311,7 +311,7 @@ function HomePage() {
       <section className="py-24 md:py-32 border-t border-border">
         <div className="container-luxury max-w-3xl text-center">
           <Reveal as="h2" className="font-display text-4xl md:text-6xl text-charcoal mb-8 leading-tight">
-            Bring the Dehyug legacy <br />
+            Bring the Devyug legacy <br />
             <span className="italic">to your kitchen.</span>
           </Reveal>
           <Reveal delay={0.1} className="text-charcoal/60 font-light mb-12 max-w-xl mx-auto">

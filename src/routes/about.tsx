@@ -71,7 +71,7 @@ function AboutPage() {
                 potent and aromatic form. We believe a spice should taste like the land it came from.
               </p>
               <p>
-                Our vision is for Dehyug to become the most-trusted Indian spice house globally, while
+                Our vision is for Devyug to become the most-trusted Indian spice house globally, while
                 staying rooted in the small-batch, hand-quality ethics of our founder.
               </p>
             </Reveal>
@@ -125,7 +125,7 @@ function AboutPage() {
       <section className="py-24 md:py-32 bg-stone-warm">
         <div className="container-luxury max-w-3xl text-center">
           <Reveal as="h2" className="font-display text-4xl md:text-5xl text-charcoal mb-8 leading-tight">
-            Explore the Dehyug collection.
+            Explore the Devyug collection.
           </Reveal>
           <Reveal delay={0.1}>
             <Link

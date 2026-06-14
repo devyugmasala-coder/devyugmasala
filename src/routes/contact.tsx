@@ -146,7 +146,7 @@ function ContactPage() {
       <section className="border-t border-border">
         <div className="aspect-[21/9] md:aspect-[21/7] w-full bg-stone-warm relative overflow-hidden">
           <iframe
-            title="Dehyug Masala location"
+            title="Devyug Masala location"
             src="https://maps.google.com/maps?q=Ahmedabad&t=&z=11&ie=UTF8&iwloc=&output=embed"
             className="w-full h-full grayscale"
             loading="lazy"

@@ -9,7 +9,7 @@ export function SiteFooter() {
             <Link to="/" className="inline-block mb-6">
               <img
                 src="/product/logo.png"
-                alt="Dehyug Logo"
+                alt="Devyug Logo"
                 className="h-16 w-auto object-contain"
               />
             </Link>
@@ -53,7 +53,7 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="pt-12 border-t border-cream/5 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-[10px] uppercase tracking-[0.2em]">© 2026 Dehyug Masala. All Rights Reserved.</p>
+          <p className="text-[10px] uppercase tracking-[0.2em]">© 2026 Devyug Masala. All Rights Reserved.</p>
           <p className="text-[10px] uppercase tracking-[0.2em] font-display italic text-cream/60 normal-case">
             Purity in every grain
           </p>
