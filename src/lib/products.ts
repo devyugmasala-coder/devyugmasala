@@ -120,11 +120,7 @@ export function getRelated(slug: string, category: CategorySlug, limit = 3) {
 }
 
 export function isPacketProduct(slug: string) {
-  const packetSlugs = [
-    "oregano",
-    "ginger-powder",
-    "garlic-powder"
-  ];
+  const packetSlugs: string[] = [];
   return packetSlugs.includes(slug);
 }
 
@@ -132,7 +128,6 @@ export function isLandscapeFallback(slug: string) {
   const fallbackSlugs = [
     "pulav-masala",
     "sambhar-masala",
-    "tea-masala"
   ];
   return fallbackSlugs.includes(slug);
 }
