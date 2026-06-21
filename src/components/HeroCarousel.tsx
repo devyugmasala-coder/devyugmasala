@@ -36,7 +36,7 @@ const SLIDES: Slide[] = [
     cta: "Explore Pure Spices",
     href: "/products",
     search: { category: "pure-spices" },
-    productImage: "/hero-slide-chilli.png",
+    productImage: "/product/redchilli.png",
     accentFrom: "#C0392B",
     accentTo: "#E76F51",
     bgFrom: "rgba(192,57,43,0.07)",
@@ -46,35 +46,35 @@ const SLIDES: Slide[] = [
     tag: "01",
   },
   {
-    id: "blended",
+    id: "biryani",
     category: "Blended Masalas",
-    eyebrow: "Heritage Formula · 40+ Years",
-    title: "Four Decades of",
-    titleAccent: "Aromatic Mastery.",
-    desc: "Heritage masala ratios crafted for the precise heat, color and aroma of regional Indian cuisine — garam masala with cardamom, cinnamon and clove.",
+    eyebrow: "Heritage Formula · 18 Spices",
+    title: "The Art of",
+    titleAccent: "Dum Biryani.",
+    desc: "Eighteen spices balanced to deliver the layered fragrance of a Hyderabadi dum biryani — our most celebrated blend, perfected over generations.",
     cta: "Discover Blends",
     href: "/products",
     search: { category: "blended-spices" },
-    productImage: "/hero-slide-biryani.png",
-    accentFrom: "#B7620A",
+    productImage: "/product/biryanimasala.png",
+    accentFrom: "#8B4513",
     accentTo: "#C29E5E",
-    bgFrom: "rgba(183,98,10,0.07)",
+    bgFrom: "rgba(139,69,19,0.07)",
     bgTo: "rgba(247,245,242,1)",
     badge: "18 Spice Blend",
-    price: "From ₹210",
+    price: "From ₹320",
     tag: "02",
   },
   {
-    id: "seasoning",
-    category: "Seasonings",
-    eyebrow: "Modern Finishers · Global Notes",
+    id: "turmeric",
+    category: "Pure Spices",
+    eyebrow: "High-Curcumin · Salem Variety",
     title: "Golden Warmth,",
     titleAccent: "Ancient Roots.",
     desc: "High-curcumin Selam turmeric — stone-ground from Salem's golden fields, one of the highest curcumin counts in the country.",
-    cta: "Shop Seasoning",
+    cta: "Explore Pure Spices",
     href: "/products",
-    search: { category: "seasoning" },
-    productImage: "/hero-slide-turmeric.png",
+    search: { category: "pure-spices" },
+    productImage: "/product/turmericpowder.png",
     accentFrom: "#D4A017",
     accentTo: "#E9963A",
     bgFrom: "rgba(212,160,23,0.08)",
@@ -82,6 +82,63 @@ const SLIDES: Slide[] = [
     badge: "High Curcumin",
     price: "From ₹110",
     tag: "03",
+  },
+  {
+    id: "garam",
+    category: "Pure Spices",
+    eyebrow: "Heritage Warming Blend",
+    title: "Warmth in Every",
+    titleAccent: "Pinch.",
+    desc: "Our classic warming blend — cardamom, cinnamon, clove, and pepper in heritage proportions that have defined Indian kitchens for decades.",
+    cta: "Explore Pure Spices",
+    href: "/products",
+    search: { category: "pure-spices" },
+    productImage: "/product/garam masala.png",
+    accentFrom: "#7B3F00",
+    accentTo: "#B5651D",
+    bgFrom: "rgba(123,63,0,0.07)",
+    bgTo: "rgba(247,245,242,1)",
+    badge: "Kitchen Staple",
+    price: "From ₹210",
+    tag: "04",
+  },
+  {
+    id: "chicken",
+    category: "Blended Masalas",
+    eyebrow: "Bold Poultry Blend",
+    title: "Flavour That",
+    titleAccent: "Commands Respect.",
+    desc: "Coriander-forward and deeply aromatic — our chicken masala is built for curries of every region, from Punjabi handi to coastal coconut broth.",
+    cta: "Discover Blends",
+    href: "/products",
+    search: { category: "blended-spices" },
+    productImage: "/product/chickenmasala.png",
+    accentFrom: "#B5451B",
+    accentTo: "#E07B39",
+    bgFrom: "rgba(181,69,27,0.07)",
+    bgTo: "rgba(247,245,242,1)",
+    badge: "Regional Classic",
+    price: "From ₹195",
+    tag: "05",
+  },
+  {
+    id: "chilli-flakes",
+    category: "Seasoning",
+    eyebrow: "Hand-Crushed · Finishing Touch",
+    title: "Heat That",
+    titleAccent: "Lingers.",
+    desc: "Coarse, vibrant hand-crushed chilli flakes with seeds intact — the perfect finishing note for pizzas, pastas, and any dish that demands a bold finale.",
+    cta: "Shop Seasoning",
+    href: "/products",
+    search: { category: "seasoning" },
+    productImage: "/product/chilliflakes.jpeg",
+    accentFrom: "#A93226",
+    accentTo: "#E74C3C",
+    bgFrom: "rgba(169,50,38,0.07)",
+    bgTo: "rgba(247,245,242,1)",
+    badge: "Hand-Crushed",
+    price: "From ₹145",
+    tag: "06",
   },
 ];
 
@@ -391,7 +448,6 @@ function SpiceSeeds({ color, positions }: { color: string; positions: Array<{ to
 ═══════════════════════════════════════════════ */
 function SlideArt({ slideId, color }: { slideId: string; color: string }) {
   if (slideId === "pure") {
-    // Slide 1 (Red Chilli): Mortar & Pestle, Diya, Lotus, seeds
     return (
       <>
         <MortarPestleSVG color={color} style={{ top: "6%", left: "-4%", opacity: 0.18 }} />
@@ -407,8 +463,7 @@ function SlideArt({ slideId, color }: { slideId: string; color: string }) {
       </>
     );
   }
-  if (slideId === "blended") {
-    // Slide 2 (Garam Masala): Handi, Thali, Curry Leaves, Mandala
+  if (slideId === "biryani") {
     return (
       <>
         <HandiSVG color={color} style={{ top: "4%", left: "-2%", opacity: 0.18 }} />
@@ -423,19 +478,66 @@ function SlideArt({ slideId, color }: { slideId: string; color: string }) {
       </>
     );
   }
-  // Slide 3 (Turmeric): Matka, Lotus, Mortar & Pestle, Thali
+  if (slideId === "turmeric") {
+    return (
+      <>
+        <MatkaSVG color={color} style={{ top: "5%", left: "-3%", opacity: 0.18 }} />
+        <LotusSVG color={color} style={{ top: "6%", right: "0%", opacity: 0.15 }} />
+        <MortarPestleSVG color={color} style={{ bottom: "10%", right: "-2%", opacity: 0.16 }} />
+        <ThaliSVG color={color} style={{ bottom: "8%", left: "1%", opacity: 0.13 }} />
+        <CurryLeavesSVG color={color} style={{ top: "38%", right: "0%", opacity: 0.14 }} />
+        <SpiceSeeds color={color} positions={[
+          { top: "30%", left: "0%", size: 4, delay: 0 },
+          { top: "58%", left: "-2%", size: 3, delay: 0.9 },
+          { top: "20%", right: "5%", size: 3.5, delay: 1.6 },
+          { top: "72%", right: "2%", size: 5, delay: 2.4 },
+        ]} />
+      </>
+    );
+  }
+  if (slideId === "garam") {
+    return (
+      <>
+        <DiyaSVG color={color} style={{ top: "5%", left: "-2%", opacity: 0.18 }} />
+        <MandalaSVG color={color} size={110} style={{ top: "8%", right: "-4%", opacity: 0.13 }} />
+        <MatkaSVG color={color} style={{ bottom: "6%", right: "-2%", opacity: 0.16 }} />
+        <LotusSVG color={color} style={{ bottom: "10%", left: "0%", opacity: 0.14 }} />
+        <SpiceSeeds color={color} positions={[
+          { top: "38%", left: "0%", size: 4, delay: 0.2 },
+          { top: "62%", left: "3%", size: 3.5, delay: 1.0 },
+          { top: "18%", right: "3%", size: 4, delay: 1.7 },
+          { top: "75%", right: "4%", size: 3, delay: 2.5 },
+        ]} />
+      </>
+    );
+  }
+  if (slideId === "chicken") {
+    return (
+      <>
+        <HandiSVG color={color} style={{ top: "3%", right: "-1%", opacity: 0.17 }} />
+        <CurryLeavesSVG color={color} style={{ bottom: "5%", left: "-2%", opacity: 0.16 }} />
+        <ThaliSVG color={color} style={{ top: "6%", left: "-1%", opacity: 0.13 }} />
+        <MandalaSVG color={color} size={80} style={{ bottom: "12%", right: "-2%", opacity: 0.12 }} />
+        <SpiceSeeds color={color} positions={[
+          { top: "44%", left: "1%", size: 3.5, delay: 0.4 },
+          { top: "65%", left: "5%", size: 3, delay: 1.2 },
+          { top: "28%", right: "5%", size: 4, delay: 1.9 },
+        ]} />
+      </>
+    );
+  }
+  // chilli-flakes
   return (
     <>
-      <MatkaSVG color={color} style={{ top: "5%", left: "-3%", opacity: 0.18 }} />
-      <LotusSVG color={color} style={{ top: "6%", right: "0%", opacity: 0.15 }} />
-      <MortarPestleSVG color={color} style={{ bottom: "10%", right: "-2%", opacity: 0.16 }} />
-      <ThaliSVG color={color} style={{ bottom: "8%", left: "1%", opacity: 0.13 }} />
-      <CurryLeavesSVG color={color} style={{ top: "38%", right: "0%", opacity: 0.14 }} />
+      <MortarPestleSVG color={color} style={{ top: "4%", right: "-2%", opacity: 0.18 }} />
+      <DiyaSVG color={color} style={{ bottom: "8%", left: "-2%", opacity: 0.15 }} />
+      <MandalaSVG color={color} size={96} style={{ top: "7%", left: "-3%", opacity: 0.12 }} />
+      <LotusSVG color={color} style={{ bottom: "6%", right: "-1%", opacity: 0.14 }} />
       <SpiceSeeds color={color} positions={[
-        { top: "30%", left: "0%", size: 4, delay: 0 },
-        { top: "58%", left: "-2%", size: 3, delay: 0.9 },
-        { top: "20%", right: "5%", size: 3.5, delay: 1.6 },
-        { top: "72%", right: "2%", size: 5, delay: 2.4 },
+        { top: "36%", left: "1%", size: 4, delay: 0 },
+        { top: "60%", left: "-1%", size: 3, delay: 0.8 },
+        { top: "22%", right: "4%", size: 3.5, delay: 1.5 },
+        { top: "70%", right: "2%", size: 4.5, delay: 2.2 },
       ]} />
     </>
   );
@@ -625,25 +727,6 @@ export function HeroCarousel() {
                 </motion.div>
               </AnimatePresence>
 
-              {/* Slide number badge overlaid on image */}
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={`badge-${slide.id}`}
-                  initial={{ opacity: 0, scale: 0.7 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ delay: 0.45, duration: 0.55, ease: EASE_IN }}
-                  className="absolute top-4 right-4 z-20"
-                >
-                  <div
-                    className="flex flex-col items-center justify-center w-14 h-14 rounded-full text-white shadow-xl backdrop-blur-sm"
-                    style={{ background: `linear-gradient(135deg,${slide.accentFrom}cc,${slide.accentTo}cc)` }}
-                  >
-                    <span className="font-display italic text-lg font-light leading-none">{slide.tag}</span>
-                    <span className="text-[6.5px] uppercase tracking-[0.14em] opacity-80 mt-0.5">of 03</span>
-                  </div>
-                </motion.div>
-              </AnimatePresence>
             </div>
           </div>
         </div>
